@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
     <h3>{{currentFocus}}</h3>
     <task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></task-list>
     <hr>
-    <edit-task [childSelectedTask]="selectedTask"></edit-task>
+    <edit-task [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></edit-task>
   </div>
   `
 })
